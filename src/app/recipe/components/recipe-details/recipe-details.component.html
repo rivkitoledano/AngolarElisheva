@@ -1,0 +1,34 @@
+@if (images) {
+	<ngb-carousel>
+		<ng-template ngbSlide>
+			<div class="picsum-img-wrapper">
+				<img [src]="images[1]" alt="Random second slide" />
+			</div>
+			
+		</ng-template>
+        <ng-template ngbSlide>
+			<div class="picsum-img-wrapper">
+				<img src="{{recipe?.routingImage}}" />
+			</div>
+			
+		</ng-template>
+		
+		<ng-template ngbSlide>
+			<div class="picsum-img-wrapper">
+				<img [src]="images[2]" alt="Random third slide" />
+			</div>
+			
+		</ng-template>
+		<ng-template ngbSlide>
+			<div class="picsum-img-wrapper">
+				<img [src]="images[3]" alt="Random fourth slide" />
+			</div>
+			
+		</ng-template>
+        <div class="carousel-caption">
+            <h3>{{recipe?.name}}</h3>
+            <p>difficulty level {{""|difficultyLevel:recipe?.difficultyLevel}}</p>
+        </div>
+	</ngb-carousel>
+}
+<div *ngFor="let x of "></div>
